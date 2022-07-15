@@ -6,7 +6,7 @@ Webサイトの実装にPython 3.9.13を使用した。
 # 実行手順
 1. scalarDBworkディレクトリに移動。
 
-2. 'docker-compose up -d'を実行。
+2. ```docker-compose up -d```を実行。
 
 3. './gradlew run --args="LoadInitialData"'を実行。
 
