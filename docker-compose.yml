@@ -4,21 +4,21 @@ services:
     image: mysql:8.0.26
     environment:
       MYSQL_ROOT_PASSWORD: mysql
-    container_name: "mysql-1-A"
+    container_name: "mysql-1"
     ports:
       - "3306:3306"
     networks:
       - sample-network
   cassandra:
     image: cassandra:3.11
-    container_name: "cassandra-1-A"
+    container_name: "cassandra-1"
     ports:
       - "9042:9042"
     networks:
       - sample-network
   schema-loader:
     image: ghcr.io/scalar-labs/scalardb-schema-loader:3.5.2
-    container_name: "schema-loader-1-A"
+    container_name: "schema-loader-1"
     depends_on:
       - cassandra
       - mysql
