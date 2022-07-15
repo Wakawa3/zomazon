@@ -8,9 +8,9 @@ Webサイトの実装にPython 3.9.13を使用した。
 
 2. ```docker-compose up -d```を実行。
 
-3. './gradlew run --args="LoadInitialData"'を実行。
+3. ```./gradlew run --args="LoadInitialData"```を実行。
 
-4. 'python3 test.py'を実行。
+4. ```python3 test.py```を実行。
 
 5. ブラウザでlocalhost:8765にアクセス
 
