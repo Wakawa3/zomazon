@@ -1,0 +1,122 @@
+{
+  "customers.customers": {
+    "transaction": true,
+    "partition-key": [
+      "customer_id"
+    ],
+    "columns": {
+      "customer_id": "INT",
+      "name": "TEXT",
+      "credit_limit": "INT",
+      "credit_total": "INT"
+    }
+  },
+  "orders.orders": {
+    "transaction": true,
+    "partition-key": [
+      "customer_id"
+    ],
+    "clustering-key": [
+      "timestamp"
+    ],
+    "secondary-index": [
+      "order_id"
+    ],
+    "columns": {
+      "order_id": "TEXT",
+      "customer_id": "INT",
+      "timestamp": "BIGINT"
+    }
+  },
+  "statements.statements": {
+    "transaction": true,
+    "partition-key": [
+      "order_id"
+    ],
+    "clustering-key": [
+      "item_id"
+    ],
+    "columns": {
+      "order_id": "TEXT",
+      "item_id": "INT",
+      "count": "INT"
+    }
+  },
+  "items.items": {
+    "transaction": true,
+    "partition-key": [
+      "item_id"
+    ],
+    "columns": {
+      "item_id": "INT",
+      "name": "TEXT",
+      "price": "INT",
+      "stock": "INT",
+      "shop_id":"INT"
+    }
+  },
+  "amazones.items": {
+    "transaction": true,
+    "partition-key": [
+      "item_id"
+    ],
+    "columns": {
+      "item_id": "INT",
+      "name": "TEXT",
+      "price": "INT",
+      "stock": "INT",
+      "shop_id":"INT"
+    }
+  },
+  "supergoogle.items": {
+    "transaction": true,
+    "partition-key": [
+      "item_id"
+    ],
+    "columns": {
+      "item_id": "INT",
+      "name": "TEXT",
+      "price": "INT",
+      "stock": "INT",
+      "shop_id":"INT"
+    }
+  },
+  "zony.items": {
+    "transaction": true,
+    "partition-key": [
+      "item_id"
+    ],
+    "columns": {
+      "item_id": "INT",
+      "name": "TEXT",
+      "price": "INT",
+      "stock": "INT",
+      "shop_id":"INT"
+    }
+  },
+  "shops.shops": {
+    "transaction": true,
+    "partition-key": [
+      "shop_id"
+    ],
+    "columns": {
+      "shop_id": "INT",
+      "name": "TEXT",
+      "itemcnt":"INT",
+      "earnings": "INT",
+      "db":"TEXT"
+    }
+  },
+  "conf.conf": {
+    "transaction": true,
+    "partition-key": [
+      "conf_id"
+    ],
+    "columns": {
+      "conf_id": "INT",
+      "shopnum": "INT",
+      "itemnum":"INT",
+      "customernum":"INT"
+    }
+  }
+}
